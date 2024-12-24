@@ -264,6 +264,10 @@
     <div class="status-bar">
       Ready
     </div>
+
+      <!-- Add the audio element -->
+  <audio id="backgroundMusic" src="song.mp3" type="audio/mp3"></audio>
+
   </div>
 
   <script>
@@ -275,6 +279,12 @@
     // Update the friend's name and quote in the card
     document.getElementById('friendName').textContent = friendName;
     document.getElementById('quote').textContent = quote;
+
+        // Play the background music when the page loads
+        window.addEventListener('load', function() {
+      const audio = document.getElementById('backgroundMusic');
+      audio.play();
+    });
 
     // Add styles to head
 const style = document.createElement('style');
